@@ -55,3 +55,24 @@ a {
     position: absolute;
     right: 20px;
 }
+.no-pico-wrapper,
+.no-pico-wrapper *,
+.no-pico-wrapper *::before,
+.no-pico-wrapper *::after {
+    all: revert;
+}
+
+/* Minimaler Standardwert, damit body-Abhängigkeiten nicht stören */
+.no-pico-wrapper {
+    display: block;
+}
+
+.bg-white {
+    background: #fff;
+}
+/*img {*/
+/*    max-width: 100%;*/
+/*    height: auto;*/
+/*    width: 14px;*/
+/*    display: block;*/
+/*}*/

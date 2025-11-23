@@ -17,7 +17,7 @@ class Signature extends IdentifiableModel
     #[ORM\Column(length: 255)]
     private ?string $lastName = null;
 
-    #[ORM\Column(length: 255)]
+    #[ORM\Column(length: 255, nullable: true)]
     private ?string $companyName = null;
 
     #[ORM\Column(length: 255, nullable: true)]
@@ -77,6 +77,15 @@ class Signature extends IdentifiableModel
     #[ORM\Column(length: 255, nullable: true)]
     private ?string $logo = null;
 
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $mobile = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $tagNumber = null;
+
+    #[ORM\Column(length: 255, nullable: true)]
+    private ?string $owner = null;
+
     public function __construct(User $user)
     {
         parent::__construct();
@@ -124,7 +133,7 @@ class Signature extends IdentifiableModel
         return $this->companyName;
     }
 
-    public function setCompanyName(string $companyName): static
+    public function setCompanyName(?string $companyName): static
     {
         $this->companyName = $companyName;
 
@@ -355,6 +364,42 @@ class Signature extends IdentifiableModel
     public function setLogo(?string $logo): static
     {
         $this->logo = $logo;
+
+        return $this;
+    }
+
+    public function getMobile(): ?string
+    {
+        return $this->mobile;
+    }
+
+    public function setMobile(?string $mobile): static
+    {
+        $this->mobile = $mobile;
+
+        return $this;
+    }
+
+    public function getTagNumber(): ?string
+    {
+        return $this->tagNumber;
+    }
+
+    public function setTagNumber(?string $tagNumber): static
+    {
+        $this->tagNumber = $tagNumber;
+
+        return $this;
+    }
+
+    public function getOwner(): ?string
+    {
+        return $this->owner;
+    }
+
+    public function setOwner(?string $owner): static
+    {
+        $this->owner = $owner;
 
         return $this;
     }

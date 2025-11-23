@@ -16,4 +16,8 @@ return [
         'path' => './assets/app.js',
         'entrypoint' => true,
     ],
+    'signature' => [
+        'path' => './assets/signature.js',
+        'entrypoint' => true,
+    ],
 ];

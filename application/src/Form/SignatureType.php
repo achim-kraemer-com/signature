@@ -28,57 +28,87 @@ class SignatureType extends AbstractType
             ])
             ->add('companyName', TextType::class, [
                 'label' => 'Firmenname',
+                'required' => false,
+            ])
+            ->add('owner', TextType::class, [
+                'label' => 'Inhaber',
+                'required' => false,
+            ])
+            ->add('tagNumber', TextType::class, [
+                'label' => 'Steuer-Nummer',
+                'required' => false,
             ])
             ->add('jobTitle', TextType::class, [
                 'label' => 'Jobtitel',
+                'required' => false,
             ])
             ->add('street', TextType::class, [
                 'label' => 'Strasse',
+                'required' => false,
             ])
             ->add('houseNumber', TextType::class, [
                 'label' => 'Hausnummer',
+                'required' => false,
             ])
             ->add('postalCode', IntegerType::class, [
                 'label' => 'PLZ',
+                'required' => false,
             ])
             ->add('city', TextType::class, [
                 'label' => 'Ort',
+                'required' => false,
             ])
             ->add('email', TextType::class, [
                 'label' => 'Email',
+                'required' => false,
             ])
             ->add('phone', TextType::class, [
                 'label' => 'Telefonnummer',
+                'required' => false,
+            ])
+            ->add('mobile', TextType::class, [
+                'label' => 'Handynummer',
+                'required' => false,
             ])
             ->add('fax', TextType::class, [
                 'label' => 'Fax',
+                'required' => false,
             ])
             ->add('website', TextType::class, [
                 'label' => 'Webseite',
+                'required' => false,
             ])
             ->add('instagram', TextType::class, [
-                'label' => 'Instagram',
+                'label' => 'Instagram URL',
+                'required' => false,
             ])
             ->add('facebook', TextType::class, [
-                'label' => 'Facebook',
+                'label' => 'Facebook URL',
+                'required' => false,
             ])
             ->add('linkedin', TextType::class, [
-                'label' => 'LinkedIn',
+                'label' => 'LinkedIn URL',
+                'required' => false,
             ])
             ->add('xing', TextType::class, [
-                'label' => 'Xing',
+                'label' => 'Xing URL',
+                'required' => false,
             ])
             ->add('github', TextType::class, [
-                'label' => 'Github',
+                'label' => 'Github URL',
+                'required' => false,
             ])
             ->add('bank', TextType::class, [
                 'label' => 'Bank',
+                'required' => false,
             ])
             ->add('iban', TextType::class, [
                 'label' => 'IBAN',
+                'required' => false,
             ])
             ->add('bic', TextType::class, [
                 'label' => 'BIC',
+                'required' => false,
             ])
             ->add('logo', FileType::class, [
                 'label'      => 'Logo',
