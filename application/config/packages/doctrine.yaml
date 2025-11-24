@@ -6,10 +6,6 @@ doctrine:
                 url: '%env(resolve:DATABASE_URL)%'
                 profiling_collect_backtrace: '%kernel.debug%'
                 use_savepoints: true
-            sqlite:
-                url: '%env(resolve:SQLITE_URL)%'
-                driver: 'pdo_sqlite'
-                charset: UTF8
     orm:
         default_entity_manager: default
         entity_managers:
@@ -28,16 +24,6 @@ doctrine:
                         dir: '%kernel.project_dir%/src/Entity'
                         prefix: 'App\Entity'
                         alias: App
-            sqlite_em:
-                connection: sqlite
-                naming_strategy: doctrine.orm.naming_strategy.underscore_number_aware
-                mappings:
-                    SQLite:
-                        is_bundle: false
-                        type: attribute
-                        dir: '%kernel.project_dir%/src/SQLiteEntity'
-                        prefix: 'App\SQLiteEntity'
-                        alias: SQLite
         controller_resolver:
             auto_mapping: false
         auto_generate_proxy_classes: true
